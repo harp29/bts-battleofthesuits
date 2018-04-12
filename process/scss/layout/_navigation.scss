@@ -1,0 +1,38 @@
+/*
+  NAVIGATION STYLES
+*/
+
+.navigation{
+  position: fixed;
+  z-index: 2;
+
+  padding: 3rem 5rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  width: 100%;
+
+  // RESPONSIVE - PHONE
+  @include respond(phone) {
+    padding: 3rem 2rem;
+  }
+
+  //**NAVIGATION__LIST STYLES**//
+  @include element('list'){
+  }
+
+  //**NAVIGATION__ITEM STYLES**//
+  @include element('item'){
+    list-style-type: none;
+    margin-bottom: .7rem;
+    cursor: pointer;
+  }
+
+  //**NAVIGATION__LINK STYLES**//
+  @include element('link'){
+    @include text(1rem, 300, inherit, left, 0, 0.2rem, $color-offset--white);
+    text-transform: capitalize;
+  }
+}

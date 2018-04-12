@@ -1,0 +1,46 @@
+
+/*
+  TEXT-BOX STYLES
+*/
+
+.text-box{
+  width: 100%;
+
+  @include modifier('center-center'){
+    justify-self: center;
+    align-self: center;
+  }
+
+  @include element('overflow-hidden'){
+    //border: 1px solid red;
+
+    position: relative;
+
+    line-height: 310%;
+
+    @media only screen and (min-width: 1024px) and (max-width: 1024px) {
+      line-height: 312%;
+      border: 1px solid red;
+    };
+
+    margin-bottom:1.5rem;
+
+    overflow: hidden;
+
+    .heading-primary{
+      letter-spacing: .3rem;
+      font-weight: bold;
+    }
+  }
+
+  //.heading-skewY-from-bottom{
+  //  -webkit-transform: translateY(40px) skewY(-4deg);
+  //  -moz-transform: translateY(40px) skewY(-4deg);
+  //  -ms-transform: translateY(40px) skewY(-4deg);
+  //  -o-transform: translateY(40px) skewY(-4deg);
+  //  transform: translateY(40px) skewY(-4deg);
+  //}
+
+
+}
+

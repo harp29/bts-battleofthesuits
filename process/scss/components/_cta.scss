@@ -1,0 +1,82 @@
+.cta{
+  position: relative;
+
+  overflow: hidden;
+
+  width: max-content;
+
+  //MOZILLA FIRFOX - WIDTH STYLE
+  @-moz-document url-prefix() {
+    width:13.5%;
+  }
+
+  margin: 0 auto;
+  padding: 2rem 4rem;
+
+  cursor: pointer;
+
+  @include text(1rem, 700, inherit, center, .5rem, .2rem, $color-offset--white);
+  text-transform: uppercase;
+
+  @include modifier('red') {
+    position: relative;
+    z-index: 1;
+    background-color: $color-offset--red;
+    transition: all .2s ease-out;
+
+    &:after{
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      z-index:-1;
+
+      content: '';
+
+      background-color: $color-offset--white;
+
+      -webkit-transform: skewY(-4deg);
+      -moz-transform: skewY(-4deg);
+      -ms-transform: skewY(-4deg);
+      -o-transform: skewY(-4deg);
+      transform: skewY(-4deg);
+
+      height: 0%;
+      width: 100%;
+
+      transition: all .2s cubic-bezier(.17,.67,.83,.67);
+    }
+
+    &:hover:after{
+      height: 150%;
+    }
+
+    &:hover{
+      color: $color-offset--black;
+    }
+  }
+
+}
+
+// SCROLL CTA - 'SCROLL DOWN'
+.scroll-cta{
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  @include element('line'){
+    position: absolute;
+    left: 50%;
+    top: 2rem;
+
+    width: 2%;
+
+    background-color: $color-offset--white;
+
+    -webkit-animation: scroll-line 2s infinite  ease-out; /* Safari 4+ */
+    -moz-animation:    scroll-line 2s infinite  ease-out; /* Fx 5+ */
+    -o-animation:      scroll-line 2s infinite  ease-out; /* Opera 12+ */
+    animation:         scroll-line 2s infinite  ease-out; /* IE 10+, Fx 29+ */
+  }
+}

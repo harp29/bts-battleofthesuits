@@ -1,0 +1,52 @@
+@import "../abstracts/mixins";
+@import "../abstracts/mixins";
+
+/*
+  HERO SECTION STYLES
+*/
+
+// .HERO-SECTION
+.hero-section{
+  position: relative;
+
+  opacity: 0;
+  visibility: hidden;
+
+  height: 100vh;
+  width: 100%;
+
+  overflow: hidden;
+
+  @include element('bg-img'){
+    opacity: 0;
+
+    visibility: hidden;
+
+    @include bg-image('../images/bts-land-large-copy.jpg');
+    filter: contrast(1.6) brightness(.7) saturate(1.5);
+    -webkit-filter: contrast(1.6) brightness(.7) saturate(1.5);
+    -moz-filter: contrast(1.6) brightness(.7) saturate(1.5);
+
+    position: absolute;
+    z-index: -1;
+
+    height: 100%;
+    width: 100%;
+
+    -webkit-transform: scale(1.4);
+    -moz-transform: scale(1.4);
+    -ms-transform: scale(1.4);
+    -o-transform: scale(1.4);
+    transform: scale(1.4);
+
+  }
+
+  .text-box{
+    padding-top: 8rem;
+  }
+}
+
+
+
+
+

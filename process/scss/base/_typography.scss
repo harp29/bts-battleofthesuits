@@ -1,0 +1,62 @@
+@import '../abstracts/_variables';
+//@import '../abstracts/butler-fonts';
+
+body{
+  font-family: $font-family--roboto;
+  color: $color-offset--white;
+  margin:0;
+  padding: 0;
+}
+
+/*global typography styles */
+
+// HEADING STYLES
+.heading-primary{
+  @include text(4rem, 300, inherit, center, 1rem, 1rem, $color-offset--black);
+  text-transform: uppercase;
+
+  @include respond(phone) {
+    font-size: 3rem;
+  }
+}
+
+.char-heading-primary{
+  display: inline-block;
+}
+
+.heading-secondary {
+  @include text(2rem, 300, inherit, center, 0.2rem, 0.1rem, $color-offset--black);
+  text-transform: capitalize;
+  font-style: italic;
+}
+
+.para-trinary{
+  @include text(.8rem, 300, 0%, center, 0.3rem, 0.3rem, $color-offset--white);
+  text-transform: capitalize;
+}
+
+
+//FONT-FAMILY MODIFIER STYLES:
+.font-family--butler-light{
+  font-family: "Butler Light", sans-serif;
+}
+
+//FONT COLOR MODIFIERS:
+.font-color--black{
+  color: $color-offset--black;
+}.font-color--white{
+  color: $color-offset--white;
+}
+.font-color--light-grey{
+  color: $color-offset--light-grey;
+}
+
+
+
+
+
+
+
+
+
+

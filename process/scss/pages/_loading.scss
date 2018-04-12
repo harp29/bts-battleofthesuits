@@ -1,0 +1,43 @@
+@import "../abstracts/mixins";
+
+.loading-section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+
+    height: 100vh;
+    width: 100%;
+
+    overflow: hidden;
+
+    //background-color: white;
+
+    @include element('video'){
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        height: 100%;
+        width: auto;
+
+    }
+
+    #company-name-holder{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+
+        width: 100%;
+    }
+}
+
+.bgimg-scale-down{
+    transform: scale(1);
+}
