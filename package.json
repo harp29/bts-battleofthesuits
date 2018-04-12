@@ -25,7 +25,7 @@
     "prod:html-minify": "html-minifier --collapse-whitespace builds/development/index.html > builds/production/index.html",
     "prod:img-compress": "imagemin builds/development/images/**/*.* --out-dir=builds/production/images --plugin=jpeg-recompress --plugin=svgo",
     "prod:serve": "live-server builds/production",
-    "deploy-gh": "npm run prod:* git subtree push --prefix dist origin gh-pages"
+    "deploy-gh": "npm-run-all prod:* git subtree push --prefix dist origin gh-pages"
   },
   "devDependencies": {
     "babel": "^6.23.0",
